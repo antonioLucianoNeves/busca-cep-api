@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  background: linear-gradient(#121212, #212b46);
+  color: #fafafa;
+  padding: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 75px;
+  animation: fliptitle 2s;
 }
 
-@keyframes App-logo-spin {
+@keyframes fliptitle {
   from {
-    transform: rotate(0deg);
+    transform: rotateX(90deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateX(0);
   }
+}
+
+.inputContainer {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.inputContainer input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 8px;
+}
+
+.inputContainer input::placeholder {
+  color: #f1f1f1;
+}
+
+.buttonSearch {
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.buttonSearch:hover {
+  transform: scale(1.2);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+  width: 500px;
+  border-radius: 8px;
+}
+
+main h2 {
+  margin: 16px 0;
+  font-size: 30px;
+}
+
+main span {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 620px) {
+  .title {
+    font-size: 60px;
+  }
+
+  main {
+    width: 80%;
+    min-height: 250px;
+  }
+
+  main h2 {
+    font-size: 28px;
+  }
+}
+
+body {
+  background-color: #282c34;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: antiquewhite;
 }
